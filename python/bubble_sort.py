@@ -13,6 +13,7 @@ def bubble_sort(arr):
                 changes = True
         if not changes:
             break
+    # no need to return the array
 
 if __name__ == '__main__':
     main()
