@@ -1,6 +1,6 @@
 #include <iostream>
 
-unsigned long fibonacci(int n, int first=0, int second=1) {
+unsigned long fibonacci(unsigned int n, unsigned long first=0, unsigned long second=1) {
     return n > 0 ? fibonacci(n - 1, second, first + second) : first;
 }
 
