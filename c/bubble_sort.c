@@ -2,8 +2,9 @@
 
 void bubble_sort(int arr[], int length) {
     length--;
-    while (1) {
-        int changes = 0;
+    int changes = 1;
+    while (changes) {
+        changes = 0;
         for (int ind = 0; ind < length; ind++) {
             if (arr[ind] > arr[ind + 1]) {
                 int swap = arr[ind];
@@ -12,7 +13,6 @@ void bubble_sort(int arr[], int length) {
                 changes = 1;
             }
         }
-        if (changes == 0) break;
     } // no need to return the array
 }
 

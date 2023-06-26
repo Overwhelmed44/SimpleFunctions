@@ -9,8 +9,9 @@ public class bubble_sort {
 
     public static void bubble_sort_(int[] arr) {
         int l = arr.length - 1;
-        while (true) {
-            boolean changes = false;
+        boolean changes = true;
+        while (changes) {
+            changes = false;
             for (int ind = 0; ind < l; ind++) {
                 if (arr[ind] > arr[ind + 1]) {
                     int swap = arr[ind];
@@ -19,7 +20,6 @@ public class bubble_sort {
                     changes = true;
                 }
             }
-            if (!changes) break;
         } // no need to return the array
     }
 }

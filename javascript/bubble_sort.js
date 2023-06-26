@@ -10,14 +10,14 @@ window.onload = function() {
 
 function bubble_sort(arr) {
     let l = arr.length;
-    while (true) {
-        let changes = false;
+    let changes = true;
+    while (changes) {
+        changes = false;
         for (let ind = 0; ind < l; ind++) {
             if (arr[ind] > arr[ind + 1]) {
                 [arr[ind], arr[ind + 1]] = [arr[ind + 1], arr[ind]]
                 changes = true;
             }
         }
-        if (!changes) break;
     } // no need to return the array
 }

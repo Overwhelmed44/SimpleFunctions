@@ -2,15 +2,15 @@
 
 template<std::size_t Size>
 void bubble_sort(int arr[]) {
-    while (true) {
-        bool changes = false;
+    bool changes = true;
+    while (changes) {
+        changes = false;
         for (int ind = 0; ind < Size - 1; ind++) {
             if (arr[ind] > arr[ind + 1]) {
                 std::swap(arr[ind], arr[ind + 1]);
                 changes = true;
             }
         }
-        if (!changes) break;
     } // no need to return the array
 }
 
