@@ -20,6 +20,7 @@ function shaker_sort(arr) {
             }
         }
         if (!changes) break;
+        changes = false;
         for (let ind = l; ind > 0; ind--) {
             if (arr[ind] < arr[ind - 1]) {
                 [arr[ind], arr[ind - 1]] = [arr[ind - 1], arr[ind]]

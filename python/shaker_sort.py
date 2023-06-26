@@ -1,9 +1,9 @@
 def main():
     example = [5, 1, 6, 3, 4]
-    bubble_sort(example)
+    shaker_sort(example)
     print(example)
 
-def bubble_sort(arr):
+def shaker_sort(arr):
     l = len(arr) - 1
     changes = True
     while changes:
@@ -11,6 +11,13 @@ def bubble_sort(arr):
         for ind in range(l):
             if arr[ind] > arr[ind + 1]:
                 arr[ind], arr[ind + 1] = arr[ind + 1], arr[ind]
+                changes = True
+        if not changes:
+            break
+        changes = False
+        for ind in range(l, 0, -1):
+            if arr[ind] < arr[ind - 1]:
+                arr[ind], arr[ind - 1] = arr[ind - 1], arr[ind]
                 changes = True
     # no need to return the array
 

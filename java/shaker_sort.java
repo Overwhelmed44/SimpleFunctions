@@ -25,6 +25,7 @@ public class shaker_sort {
                 }
             }
             if (!changes) break;
+            changes = false;
             for (int ind = l; ind > 0; ind--) {
                 if (arr[ind] < arr[ind - 1]) {
                     swap(arr, ind, ind - 1);
