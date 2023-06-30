@@ -2,8 +2,8 @@ public class bubble_sort {
     public static void main(String[] args) {
         int[] example = {5, 1, 6, 3, 4};
         bubble_sort_(example);
-        for (int ind = 0; ind < example.length; ind++) {
-            System.out.printf("%d ", example[ind]);
+        for (int arg : example) {
+            System.out.printf("%d ", arg);
         }
     }
 
@@ -14,9 +14,9 @@ public class bubble_sort {
             changes = false;
             for (int ind = 0; ind < l; ind++) {
                 if (arr[ind] > arr[ind + 1]) {
-                    int swap = arr[ind];
+                    int temp = arr[ind];
                     arr[ind] = arr[ind + 1];
-                    arr[ind + 1] = swap;
+                    arr[ind + 1] = temp;
                     changes = true;
                 }
             }
