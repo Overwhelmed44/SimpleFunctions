@@ -2,8 +2,8 @@ public class shaker_sort {
     public static void main(String[] args) {
         int[] example = {5, 1, 6, 3, 4};
         shaker_sort_(example);
-        for (int ind = 0; ind < example.length; ind++) {
-            System.out.printf("%d ", example[ind]);
+        for (int arg : example) {
+            System.out.printf("%d ", arg);
         }
     }
 
